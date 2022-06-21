@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #242329;
+  color: #fff;
+}
+
+/* ======================== */
+
+.input-group {
+  position: relative;
+}
+
+.input {
+  margin-left: 50rem;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  color: #fff;
+  background-color: transparent;
+  outline: 2px solid #fff;
+}
+
+.input-label {
+  position: absolute;
+  left: 50rem;
+  
+  transform: translate(10px, 10px);
+  transform-origin: left;
+  transition: transform 0.25s;
+}
+
+.input:focus ~ .input-label,
+.input:valid ~ .input-label {
+  transform: translate(0, -30px) scale(0.8);
+  color: #c5fce1;
+}
+
+.input:is(:focus, :valid) {
+  outline-color: #c5fce1;
+}
+/*  */
+
+.corpo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: 100%;
+}
+
+.listavisua {
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  border-top-left-radius: 15px;
+  width: 1000px;
+}
+.cablista {
+  background: #2e8b57;
+  color: #efe6e7;
+  border-top-left-radius: 15px;
+}
+.separador {
+  margin-top: 150px;
+}
+
+.Nome {
+  width: 300px;
+}
+.Setor {
+  width: 250px;
+}
+.Ramal {
+  width: 100px;
+}
+.Celular {
+}
+.Email {
+}
+
+@media screen and (max-width: 1000px) {
+}
+
+.tabela-responsiva {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.pesuisa {
+  position: relative;
+}
+
+.input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  color: #fff;
+  background-color: transparent;
+  outline: 2px solid #fff;
+}
+.linha1 {
+  background-color: #47713d;
+}
+.linha1:hover { background:#AAD9A0;
+  color: black;
+}
+.linha:hover { background:#AAD9A0;
+  color: black;
+}
+.ramaisf {text-align: center;}

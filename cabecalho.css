@@ -1,0 +1,136 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/*
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 12px;
+}
+*/
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2E8B57;
+    padding-block: 15px;
+    height: 80px;
+}   
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    margin-right: 50px;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+#toggler,
+.navbar label {
+    display: none;
+}
+.menu {
+    margin-right: 15px;
+}
+@media screen and (max-width: 1000px) {
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        margin-right: 0;
+        z-index: 10;
+    }
+
+    .list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        color:black ;
+    }
+
+    .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #toggler:checked~.menu {
+        max-height: 150px;
+        background-color: #D2FACA;
+        border: 1px solid;
+        
+        
+    }
+    
+}
+
+.burguer {
+    width: 48px;
+    height: 48px;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+
+.bun {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    transition: transform .18s cubic-bezier(0.04, 0.04, 0.12, 0.96) .15s;
+
+}
+
+.bun-crust {
+    display: block;
+    width: 17px;
+    height: 1px;
+    background-color: #151515;
+    border-radius: 1px;
+    position: absolute;
+    left: 7px;
+    transition: transform .1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) .2s;
+}
+
+.bun-crust-top {
+    top: 14px;
+    transform: translateY(-3px);
+}
+
+.bun-crust-bottom {
+    bottom: 14px;
+    transform: translateY(3px);
+}
+
+#toggler:checked+.burguer .bun-top {
+    transform: rotate(45deg);
+}
+
+#toggler:checked+.burguer .bun-bottom {
+    transform: rotate(-45deg);
+}
+#toggler:checked+.burguer .bun-crust-top,
+#toggler:checked+.burguer .bun-crust-bottom {
+    transform: none;
+    transition: transform .1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+}
